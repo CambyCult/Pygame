@@ -1,6 +1,7 @@
 import pygame
 from sys import exit
 
+
 def display_score():
     current_time = int(pygame.time.get_ticks() / 100) - start_time
     score_surf = test_font.render(f'Score: {current_time}',False,(64,64,64))
@@ -15,21 +16,21 @@ test_font = pygame.font.SysFont('Calibri', 24)
 game_active = True
 start_time = 0
 
-sky_surface = pygame.image.load('textures/layer 2.jpg').convert()
-ground_surface = pygame.image.load('textures/layer 1.jpg').convert()
+sky_surface = pygame.image.load('.\layer 2.jpg').convert()
+ground_surface = pygame.image.load('.\layer 1.jpg').convert()
 
 #score_surf = test_font.render('My game', False, (64,64,64))
 #score_rect = score_surf.get_rect(center = (400, 50))
 
-enemy_surface = pygame.image.load('textures/enemy1.jpg').convert_alpha()
+enemy_surface = pygame.image.load('.\enemy1.jpg').convert_alpha()
 enemy_rectangle = enemy_surface.get_rect(topleft = (500,250))
 
-player_surface = pygame.image.load('textures/player.jpg').convert()
+player_surface = pygame.image.load('.\Artie.jpg').convert()
 player_rectangle = player_surface.get_rect(topleft = (25,250))
 player_gravity = 0
 
 #Intro Screen
-player_stand = pygame.image.load('textures/player.jpg').convert_alpha()
+player_stand = pygame.image.load('.\Artie.jpg').convert_alpha()
 player_stand_rect = player_stand.get_rect(center = (400,200))
 
 
